@@ -140,6 +140,8 @@ Tahapan ini mencakup pembagian dataset dengan ratio 80:20 sebelum dilakukan pela
 
 Dengan menerapkan metode random forest, kita dapat menetapkan feature importance yang menjadi parameter yang penting yang dapat menentukan readmission: `num_lab_procedures`, `num_medications`, `group_diag_3_encoded`, `time_in_hospital`, `group_diag_2_encoded`, `group_diag_1_encoded`, `discharge_disposition_id`, `age`, `num_procedures`, dan `number_diagnoses`.
 
+![Hasil Feature Importances](assets/image01.png)
+
 ## Evaluation
 
 Evaluasi dilakukan dengan mengidentifikasi nilai akurasi, presisi, recall, dan f1 score dari keempat model. Setiap model juga dilakukan pengecekkan melalui confusion matrix.
@@ -148,6 +150,8 @@ Evaluasi dilakukan dengan mengidentifikasi nilai akurasi, presisi, recall, dan f
 2. Berdasarkan presisi, urutan model yang terbaik: random forest (63,64%), decision tree (11,90%), ANN (10,23%), dan logistic regression (10,14%). 
 3. Berdasarkan recall, urutan model yang terbaik: logistic regression (90,80%), decision tree (85,24%), ANN (83,94%), dan random forest (0,56%). 
 4. Berdasarkan f1 score, urutan model yang terbaik: logistic regression (14,25%), decision tree (10,50%), ANN (9,88%), dan random forest (1,11%).
+
+![Hasil Evaluasi 4 Model: Logistic Regression, Decision Tree, Random Forest, dan Artificial Neural Network (ANN)](assets/image02.png)
 
 Untuk kasus ini, pemilihan model terbaik didasarkan pada 2 skenario, yaitu sebagai berikut.
 1. Jika kebutuhan rumah sakit adalah mengidentifikasi pengalokasian sumber daya agar lebih optimal, parameter akurasi dan presisi menjadi penting. Dengan demikian, model yang terbaik yang dapat digunakan adalah **Random Forest**.
